@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-11-25T11:37:44.556Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="A4akROmvoHlF4-9oTRUm" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-25T12:11:30.995Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="IJp6JPblc-jvseCXrVZB" version="22.1.4" type="github">
   <diagram name="第 1 页" id="o08etQotgViXCq6JYFtT">
     <mxGraphModel dx="954" dy="1786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="TJC6TPCVy2rXhTWuEsZX-1" value="rect_mask1 = annotation1[&#39;rectMask&#39;]：获取第一个标注中矩形区域的坐标和尺寸。&#xa;rect_mask2 = annotation2[&#39;rectMask&#39;]：获取第二个标注中矩形区域的坐标和尺寸。&#xa;x_min1 = rect_mask1[&#39;xMin&#39;]：获取第一个标注中矩形左上角的x坐标。&#xa;y_min1 = rect_mask1[&#39;yMin&#39;]：获取第一个标注中矩形左上角的y坐标。&#xa;width1 = rect_mask1[&#39;width&#39;]：获取第一个标注中矩形的宽度。&#xa;height1 = rect_mask1[&#39;height&#39;]：获取第一个标注中矩形的高度。&#xa;x_max1 = x_min1 + width1：计算第一个标注中矩形右下角的x坐标。&#xa;y_max1 = y_min1 + height1：计算第一个标注中矩形右下角的y坐标。&#xa;x_min2 = rect_mask2[&#39;xMin&#39;]：获取第二个标注中矩形左上角的x坐标。&#xa;y_min2 = rect_mask2[&#39;yMin&#39;]：获取第二个标注中矩形左上角的y坐标。&#xa;width2 = rect_mask2[&#39;width&#39;]：获取第二个标注中矩形的宽度。&#xa;height2 = rect_mask2[&#39;height&#39;]：获取第二个标注中矩形的高度。&#xa;x_max2 = x_min2 + width2：计算第二个标注中矩形右下角的x坐标。&#xa;y_max2 = y_min2 + height2：计算第二个标注中矩形右下角的y坐标。&#xa;intersection_width = max(0, min(x_max1, x_max2) - max(x_min1, x_min2))：计算两个矩形区域在水平方向上的交集宽度。&#xa;intersection_height = max(0, min(y_max1, y_max2) - max(y_min1, y_min2))：计算两个矩形区域在垂直方向上的交集高度。&#xa;intersection_area = intersection_width * intersection_height：计算两个矩形区域的交集面积。&#xa;area1 = width1 * height1：计算第一个矩形区域的面积。&#xa;area2 = width2 * height2：计算第二个矩形区域的面积。&#xa;union_area = area1 + area2 - intersection_area：计算两个矩形区域的并集面积。&#xa;intersection_ratio = intersection_area / union_area：计算交集面积与并集面积的比值，用于判断标注是否相似。&#xa;if annotation1[&#39;labels&#39;][&#39;labelName&#39;] == annotation2[&#39;labels&#39;][&#39;labelName&#39;]:：如果两个标注的名称相同，说明它们是同一类别的物体。&#xa;if intersection_ratio &gt; threshold:：如果交集面积与并集面积的比值大于阈值，则认为两个标注相似，返回相似度值。&#xa;else:：否则认为两个标注不相似，返回0。&#xa;else:：如果两个标注的名称不同，则认为它们是不同类别的物体，返回0。" style="text;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="180" y="420" width="700" height="370" as="geometry" />
+          <mxGeometry x="220" y="420" width="700" height="370" as="geometry" />
         </mxCell>
         <mxCell id="TJC6TPCVy2rXhTWuEsZX-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="360" y="90" width="280" height="150" as="geometry" />
@@ -46,7 +46,7 @@
         <mxCell id="TJC6TPCVy2rXhTWuEsZX-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="230" y="320" as="sourcePoint" />
-            <mxPoint x="230" y="-80" as="targetPoint" />
+            <mxPoint x="230" y="-40" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="TJC6TPCVy2rXhTWuEsZX-19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
